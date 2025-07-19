@@ -14,7 +14,7 @@ export default function SplashScreen() {
         if (userData) {
         router.replace('/main/home');// 👈 Redirect to home if logged in
         } else {
-          router.replace('/auth/signup'); // 👈 Otherwise go to SignUp
+          router.replace('/main/home'); // 👈 Otherwise go to SignUp
         }
       }, 200); // ⏳ Delay for splash effect
     };

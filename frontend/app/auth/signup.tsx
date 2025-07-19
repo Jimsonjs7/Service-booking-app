@@ -25,7 +25,7 @@ export default function SignUpScreen() {
         Alert.alert('⚠️ Signup Failed', data.message || 'Try again');
       }
     } catch (error) {
-      Alert.alert('❌ Error', error.message);
+      Alert.alert('❌ Error', (error as Error).message);
     }
   };
 

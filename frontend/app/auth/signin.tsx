@@ -26,7 +26,7 @@ export default function SignInScreen() {
         Alert.alert('🚫 Login Failed', data.message || 'Invalid credentials');
       }
     } catch (error) {
-      Alert.alert('❌ Error', error.message);
+      Alert.alert('❌ Error', (error as Error).message);
     }
   };
 

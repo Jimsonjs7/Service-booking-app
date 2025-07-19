@@ -34,7 +34,7 @@ export default function HomePage() {
   const handleLogout = async () => {
     try {
       await AsyncStorage.clear();
-     router.replace('auth/signin')
+     router.replace('/auth/signin')
 
     } catch (err) {
       Alert.alert('Logout Error', 'Unable to log out.');
@@ -49,7 +49,7 @@ export default function HomePage() {
       .catch(err => console.error('Error fetching categories:', err))
       .finally(() => setLoadingCategories(false));
 
-    fetch('http://localhost:8080/api/taskers/top')
+    fetch('http://192.168.1.100:8080/api/taskers/top')
       .then(res => res.json())
       .then(setTopTaskers)
       .catch(err => console.error('Error fetching top taskers:', err))

@@ -9,8 +9,12 @@ import java.util.List;
 import java.util.Optional;
 
 public interface UserRepository extends JpaRepository<User, Long> {
+
     boolean existsByEmail(String email);
+
     Optional<User> findByEmail(String email);
+
+    Optional<User> findByName(String name); // ✅ Added for checking username availability
 
     List<User> findTop5ByRoleAndActiveOrderByRatingDesc(String role, boolean active);
 
